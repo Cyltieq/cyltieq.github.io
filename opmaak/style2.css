@@ -8,28 +8,30 @@ h1 { text-align: center;
 	font-size: 4em;
 	}
 	
-/* set width properly */
-html, body {
-	width: 100%;
-	height: 900px;
-	overflow: hidden;
-	
-}
+
 
 td {
   text-align: center;
 }
 /* set font for body + bg */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
 body {
-      /* background:  linear-gradient(95deg, #162d19 25%, #1f5942, #4f9c85); */
-	 background: linear-gradient(0deg, #ff0030 12%,#050505 50%); 
-      position: relative;
-	  color: #ffffff;
-	  font-family: Geo, sans-serif;
-	  height: auto;
-    width: auto;
-    background-repeat: no-repeat;
-    }
+  background: linear-gradient(0deg, #ff0030 12%, #050505 50%);
+  background-repeat: no-repeat;
+  background-size: cover;  
+  background-position: center;
+  color: #ffffff;
+  font-family: Geo, sans-serif;
+  min-height: 100%; 
+  position: relative;
+}
 /* text container */	
 	.center {
   margin: auto;
