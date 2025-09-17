@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+  <h1><a href="video/cargo.mp4"><img src="afbeelding/cooltext.gif" id="title"></a></h1>
+  <title> my pawsome website 2</title> 
+  <link rel="icon" type="image/png" href="afbeelding/33.ico">
+  
+  <link rel="stylesheet"  href="opmaak/style2.css">
+  <link href="https://fonts.googleapis.com/css2?family=Geo:ital@0;1&display=swap" rel="stylesheet">
+  
+  <audio id="bgm" src="geluid/bgm.ogg"   preload="auto"></audio>
+  <audio id="bgm2" src="geluid/bgm2.ogg" preload="auto"></audio>
+  <audio id="meow" scr="geluid/meow.mp3" preload="auto"></audio>
+ 
+   <script>
+    function bgm(bgm) {
+      var audio = document.getElementById(bgm);
+      audio.play();
+	  if (!audio.paused && bgm.includes("bgm")) {
+        songName.innerText = bgm; 
+      }
+    }
+	 function adjustVolume(bgm) {
+      var audio = document.getElementById(bgm);
+      var volumeSlider = document.getElementById("volume");
+      var volume = volumeSlider.value / 100; 
+      audio.volume = volume;
+    }
+  </script>
+</head>
+
+
+
+<body>
+  
+<br>
+  <div class="container">
+    <div class="buttons">
+      <button onclick="changeContent('content1')">1dqe2e</button>
+      <button onclick="changeContent('content2')">287979</button>
+      <button onclick="changeContent('content3')">39879</button>
+    </div>
+
+    <div class="center" id="centerBox">
+      <p id="para1">what is it that you seek :33<br>	
+        <img src="afbeelding/cat2.png" alt="Cat">
+      </p>
+<div class="scrolling-text">
+  <marquee behavior="scroll" direction="left" scrollamount="6">
+   They've got Allen wrenches, gerbil feeders, toilet seats, electric heaters, Trash compactors, juice extractors, shower rods and water meters, Walkie-talkies, copper wires, safety goggles, radial tires, BB pellets, rubber mallets, fans and dehumidifiers, Picture hangers, paper cutters, waffle irons, window shutters, Paint removers, window louvers, masking tape and plastic gutters, Kitchen faucets, folding tables, weather stripping, jumper cables, Hooks and tackle, grout and spackle, power foggers, spoons and ladles, Pesticides for fumigation, high-performance lubrication, Metal roofing, waterproofing, multi-purpose insulation, Air compressors, brass connectors, wrecking chisels, smoke detectors, Tire gauges, hamster cages, thermostats and bug deflectors, Trailer hitch demagnetizers, automatic circumcisers, Tennis rackets, angle brackets, Duracells and Energizers, Soffit panels, circuit breakers, vacuum cleaners, coffee makers, Calculators, generators, matching salt and pepper shakers.
+ 
+  </marquee>
+</div>
+
+      <input type="range" min="1" max="100" value="0" class="slider" id="volume" oninput="adjustVolume('bgm'),bgm('bgm')" title="play a song"> 
+      <a href="https://soundcloud.com/isocosa/valerate"><span id="songName" title="source"></span></a>
+
+	
+
+    
+    </div>
+	
+  </div>
+  <!-- <div style="margin-bottom: 200px;"></div>  -->
+  <div id="tsparticles"></div>
+
+  <div class="background"></div>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+
+<script>
+tsParticles.load("tsparticles", {
+  particles: {
+    number: { value: 105 },
+    color: { value: "#ffffff" },
+    shape: { type: "star" },
+    size: { value: 12, random: true },
+    opacity: { value: 0	 },
+    move: { enable: true, speed: 1.5, random: true },
+	   stroke: {
+      width: 2,
+      color: "#ffffff"
+    },
+    rotate: {
+      value: 45,
+      random: false,
+      direction: "random",
+      animation: { enable: true, speed: 5 }
+    },
+     line_linked: {
+      enable: true, distance: 125,}
+  }
+  
+});
+</script>
+</body>
+<footer>
+</footer>
+</html>
