@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+  <h1><a href="video/cargo.mp4"><img src="afbeelding/cooltext.gif"></a></h1>
+  <title> my pawsome website 2</title> 
+  <link rel="icon" type="image/png" href="afbeelding/33.ico">
+  
+  <link rel="stylesheet"  href="opmaak/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Geo:ital@0;1&display=swap" rel="stylesheet">
+  
+  <audio id="bgm" src="geluid/bgm.ogg"   preload="auto"></audio>
+  <audio id="bgm2" src="geluid/bgm2.ogg" preload="auto"></audio>
+  <audio id="meow" scr="geluid/meow.mp3" preload="auto"></audio>
+ 
+   <script>
+    function bgm(bgm) {
+      var audio = document.getElementById(bgm);
+      audio.play();
+	  if (!audio.paused && bgm.includes("bgm")) {
+        songName.innerText = bgm; 
+      }
+    }
+	 function adjustVolume(bgm) {
+      var audio = document.getElementById(bgm);
+      var volumeSlider = document.getElementById("volume");
+      var volume = volumeSlider.value / 100; 
+      audio.volume = volume;
+    }
+  </script>
+</head>
+
+
+<body>
+
+  <div class="center">
+  <p id="para1">what is it that you seek :33<br>	
+  <img src="afbeelding/cat2.png">
+  
+  <input type="range" min="1" max="100" value="0" class="slider" id="volume" oninput="adjustVolume('bgm'),bgm('bgm')" title="play a song" > 
+  <a href="https://soundcloud.com/isocosa/valerate"><span id="songName" title="source"></span></a>
+
+</p>
+  
+ <table>
+  <tr>
+    <th><b>project</b></th>
+    <th><b>music</b></th>
+    <th><b>contact</b></th>
+  </tr>
+  <tr>
+    <td><i><a href="1.html">my awesome website</a></td>
+    <td><i><a href="https://soundcloud.com/contrivanc3">sakuraskies</a></td>
+    <td><i><a href=mailto:monostablehysteresis@gmail.com>email</a></td>
+  </tr>
+  <tr>
+    <td><i>ANAKATA</td>
+    <td><i><a href="https://soundcloud.com/penis-label/dj-doorgedraaid-x-shitbot-x-the-beat-alchemist-x-padkaprao-gai-kaidao-dark-mango-psychology">DJ DOORGEDRAAID</a></td>
+    <td><i>my pawsome discord</td>
+  </tr>
+</table> 
+
+   </div>
+   <div style="margin-bottom: 600px;"></div>
+  <div id="tsparticles"></div>
+  <div class="background"></div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+
+<script>
+tsParticles.load("tsparticles", {
+  particles: {
+    number: { value: 105 },
+    color: { value: "#ffffff" },
+    shape: { type: "star" },
+    size: { value: 12, random: true },
+    opacity: { value: 0	 },
+    move: { enable: true, speed: 1.5, random: true },
+	   stroke: {
+      width: 2,
+      color: "#ffffff"
+    },
+    rotate: {
+      value: 45,
+      random: false,
+      direction: "random",
+      animation: { enable: true, speed: 5 }
+    },
+     line_linked: {
+      enable: true, distance: 125,}
+  }
+  
+});
+</script>
+</body>
+<footer>
+</footer>
+</html>
